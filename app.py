@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 ##mysql://user:password@database.us-west-2.rds.amazonaws.com:3306/mydatabase
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:Gulberg1136@flaskmis.cdiq208aejj0.us-east-1.rds.amazonaws.com:3306/flaskaws'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:Gulberg1136@flaskmis.cdiq208aejj0.us-east-1.rds.amazonaws.com:3306/flaskaws?ssl_ca=us-east-1-bundle.pem'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-##app.secret_key = "somethingunique"
+app.secret_key = "somethingunique"
 
 
 app.config['MYSQL_SSL_DISABLED'] = True
